@@ -20,6 +20,7 @@ namespace GameStart.Models
         public int UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public string UserName { get; set; }
+        public bool Tradeable { get; set; }
 
         public static JArray GetGames(string requestString)
         {

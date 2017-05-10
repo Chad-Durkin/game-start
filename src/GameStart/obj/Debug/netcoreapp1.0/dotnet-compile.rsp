@@ -216,6 +216,8 @@ c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Controllers\HomeController.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.Designer.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.cs
+c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.Designer.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\ApplicationDbContextModelSnapshot.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationDbContext.cs
 c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationUser.cs

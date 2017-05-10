@@ -8,6 +8,7 @@
 @foreach(var Game in Model)
 {
     <script>
+        //Grab all game info
         $.ajax({
             url: '/Games/Details',
             type: 'GET',
@@ -21,6 +22,8 @@
                         "<h2> Game Title: " + result[0].name + "</h2>" +
                         "<h3> Rating: " + result[0].rating.toFixed(2) + "</h3>" +
                         "<h4> Summary: " + result[0].summary + "</h4>" +
+                        "<h4>Currently up for trade: @Game.Tradeable </h4>" +
+                        "<a href='/Games/SetTradeable/" + result[0].id +"'>Set to tradeable</a>" +
                         "</div>");
                 }
                 else {
@@ -28,14 +31,14 @@
                         "<h2> Game Title: " + result[0].name + "</h2>" +
                         "<h3> Rating: No Rating </h3>" +
                         "<h4> Summary: " + result[0].summary + "</h4>" +
+                        "<h4>Currently up for trade: @Game.Tradeable </h4>" +
+                        "<a href='/Games/SetTradeable/" + result[0].id +"'>Set to tradeable</a>" +
                         "</div>");
                 }
-
             }
         });
     </script>
 }
-
 
 <h2>Account management</h2>
 

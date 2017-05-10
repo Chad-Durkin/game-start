@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GameStart.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -50,9 +51,19 @@ namespace GameStart.Controllers
         {
             Game newGame = new Game { ApiId = id };
             newGame.UserName = User.Identity.Name;
+            newGame.Tradeable = false;
             _db.Games.Add(newGame);
             _db.SaveChanges();
             return Json(newGame);
+        }
+
+        public IActionResult SetTradeable(int id)
+        {
+            Game foundGame = _db.Games.FirstOrDefault(g => g.ApiId == id);
+            foundGame.Tradeable = true;
+            _db.Entry(foundGame).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Management", "Account");
         }
     }
 }
