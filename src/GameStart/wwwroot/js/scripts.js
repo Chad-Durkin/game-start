@@ -11,7 +11,7 @@
                 console.log(result);
                 htmlString = "";
                 for (var i = 0; i < result.length; i++) {
-                    htmlString += "<h1>" + result[i].name + "</h1>"
+                    htmlString += "<div class='box' gameObject' id='" + result[i].id + "'><h1>" + result[i].name + "</h1></div>"
                 }
                 $(".games").html(htmlString);
             }
