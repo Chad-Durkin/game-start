@@ -8,6 +8,7 @@ namespace GameStart.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public virtual ICollection<Game> Games { get; set; }
 
     }
 }
