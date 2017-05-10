@@ -76,6 +76,8 @@ namespace GameStart.Migrations
 
                     b.Property<string>("UserId1");
 
+                    b.Property<string>("UserName");
+
                     b.HasKey("GameId");
 
                     b.HasIndex("UserId1");

@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 700px;
     margin: 2em auto;
+    height: 100%;
 }
 .cols {
     -moz-column-count:3;
@@ -17,8 +18,13 @@
     column-gap: 3%;
     column-width: 30%;
 }
-.box {
+.game-box {
     margin-bottom: 20px;
-    height:100px;
+    height:200px;
     background:#BFBFBF;
+}
+
+.gameImg {
+    max-height: 20%;
+    max-width: 80%;
 }

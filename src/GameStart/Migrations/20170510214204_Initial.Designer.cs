@@ -8,8 +8,8 @@ using GameStart.Models;
 namespace GameStart.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170510160743_initial")]
-    partial class initial
+    [Migration("20170510214204_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -76,6 +76,8 @@ namespace GameStart.Migrations
                     b.Property<int>("UserId");
 
                     b.Property<string>("UserId1");
+
+                    b.Property<string>("UserName");
 
                     b.HasKey("GameId");
 

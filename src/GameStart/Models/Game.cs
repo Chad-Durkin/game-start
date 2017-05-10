@@ -16,12 +16,10 @@ namespace GameStart.Models
     {
         [Key]
         public int GameId { get; set; }
-        [JsonProperty("id")]
         public int ApiId { get; set; }
         public int UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        public string UserName { get; set; }
 
         public static JArray GetGames(string requestString)
         {
