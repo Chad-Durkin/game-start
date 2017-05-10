@@ -17,9 +17,10 @@ namespace GameStart.Controllers
             return View();
         }
 
-        public IActionResult GetGames()
+        public IActionResult GetGames(string searchQuery)
         {
-            var result = Game.GetGames();
+            string parsedSearch = searchQuery.Replace(" ", "+");
+            var result = Game.GetGames("?fields=name&li mit=10&offset=0&order=release_dates.date%3Adesc&search=" + parsedSearch);
             return Json(result);
         }
     }

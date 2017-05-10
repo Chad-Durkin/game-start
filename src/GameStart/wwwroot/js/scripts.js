@@ -6,6 +6,7 @@
             url: 'Games/GetGames',
             type: 'GET',
             dataType: 'json',
+            data: {searchQuery: $("#searchQuery").val()},
             success: function (result) {
                 console.log(result);
                 htmlString = "";

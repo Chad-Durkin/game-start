@@ -23,10 +23,10 @@ namespace GameStart.Models
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        public static JArray GetGames()
+        public static JArray GetGames(string requestString)
         {
             var client = new RestClient("https://igdbcom-internet-game-database-v1.p.mashape.com/games/");
-            var request = new RestRequest("?fields=name&limit=10&offset=0&order=release_dates.date%3Adesc&search=zelda", Method.GET);
+            var request = new RestRequest(requestString, Method.GET);
             request.AddHeader("X-Mashape-Key", EnvironmentVariables.ApiKey);
             request.AddHeader("Accept", "application/json");
 
@@ -36,8 +36,9 @@ namespace GameStart.Models
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
 
+            //Since this api returns an array, just JArray instead.
             JArray result = JsonConvert.DeserializeObject<JArray>(response.Content);
-            //var result = JsonConvert.DeserializeObject<List<Game>>(jsonResponse["id"].ToString());
+
 
             return result;
         }
