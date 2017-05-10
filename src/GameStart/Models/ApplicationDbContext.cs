@@ -9,6 +9,9 @@ namespace GameStart.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Game> Games { get; set; }
+        public DbSet<Trade> Trades { get; set; }
         public ApplicationDbContext()
         {
 
@@ -22,7 +25,6 @@ namespace GameStart.Models
         {
             base.OnModelCreating(builder);
         }
-        public DbSet<Game> Games { get; set; }
-        public DbSet<Trade> Trades { get; set; }
+        
     }
 }

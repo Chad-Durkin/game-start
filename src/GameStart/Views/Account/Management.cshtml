@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Management";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GameStart.Models.Game>
+
+@foreach(var Game in Model)
+{
+    <script>
+        $.ajax({
+            url: '/Games/Details',
+            type: 'GET',
+            dataType: 'json',
+            data: { id: @Game.ApiId },
+            success: function (result) {
+                if (result[0].rating && result[0].screenshots)
+                {
+                    $(".account-games").append("<hr><div class='game-detail'>" +
+                        "<img class='gameImg' src='" + result[0].screenshots[0].url.replace("t_thumb/", "") + "' />" +
+                        "<h2> Game Title: " + result[0].name + "</h2>" +
+                        "<h3> Rating: " + result[0].rating.toFixed(2) + "</h3>" +
+                        "<h4> Summary: " + result[0].summary + "</h4>" +
+                        "</div>");
+                }
+                else {
+                    $(".account-games").append("<hr><div class='game-detail'>" +
+                        "<h2> Game Title: " + result[0].name + "</h2>" +
+                        "<h3> Rating: No Rating </h3>" +
+                        "<h4> Summary: " + result[0].summary + "</h4>" +
+                        "</div>");
+                }
+
+            }
+        });
+    </script>
+}
+
+
+<h2>Account management</h2>
+
+<div class="account-games">
+</div>

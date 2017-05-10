@@ -10,6 +10,9 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <h2>GameStart</h2>
+    @Html.ActionLink("Home", "Index", "Account") |
+    @Html.ActionLink("Account Details", "Management", "Account")
     <div class="container">
         @RenderBody()
     </div>

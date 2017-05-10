@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using GameStart.Models;
 using Microsoft.AspNetCore.Identity;
 using GameStart.ViewModels;
+using System.Linq;
 
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -72,6 +73,11 @@ namespace GameStart.Controllers
             {
                 return View();
             }
+        }
+
+        public IActionResult Management()
+        {
+            return View(_db.Games.Where(g => g.UserName == User.Identity.Name).ToList());
         }
     }
 }

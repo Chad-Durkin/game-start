@@ -1,4 +1,5 @@
 ﻿$(function () {
+
     $("#get-games").click(function () {
         console.log("clicked");
         $(".games").html("<h2>Please wait while we gather a list of games...</h2>");
