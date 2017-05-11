@@ -1,5 +1,5 @@
---temp-output:c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\obj\Debug\netcoreapp1.0\
---out:c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\bin\Debug\netcoreapp1.0\GameStart.dll
+--temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\bin\Debug\netcoreapp1.0\GameStart.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -208,21 +208,21 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
---resource:"c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\obj\Debug\netcoreapp1.0\GameStartdotnet-compile.deps.json",GameStart.deps.json
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Program.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Startup.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Controllers\AccountController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Controllers\GamesController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Controllers\HomeController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Migrations\ApplicationDbContextModelSnapshot.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationDbContext.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationUser.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\EnvironmentVariables.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\Game.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\Models\Trade.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\ViewModels\LoginViewModel.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\GameStart\src\GameStart\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\obj\Debug\netcoreapp1.0\GameStartdotnet-compile.deps.json",GameStart.deps.json
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Program.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Startup.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Controllers\AccountController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Controllers\GamesController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Controllers\HomeController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510214204_Initial.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Migrations\20170510232811_changeGameModel.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationDbContext.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Models\ApplicationUser.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Models\EnvironmentVariables.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Models\Game.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\Models\Trade.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\GameStart\src\GameStart\ViewModels\RegisterViewModel.cs

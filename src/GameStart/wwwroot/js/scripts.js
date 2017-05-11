@@ -1,5 +1,4 @@
 ﻿$(function () {
-
     $("#get-games").click(function () {
         console.log("clicked");
         $(".games").html("<h2>Please wait while we gather a list of games...</h2>");
@@ -12,7 +11,13 @@
                 console.log(result);
                 var htmlString = "<div class='cols'>";
                 for (var i = 0; i < result.length; i++) {
-                    htmlString += "<div class='game-box gameObject' id='" + result[i].id + "'><h4>" + result[i].name + "</h4></div>"
+                    if (result[i].screenshots)
+                    {
+
+                    htmlString += "<div class='game-box gameObject' id='" + result[i].id + "'><h4>" + result[i].name + "</h4> <img class='img-thumb' src='" + result[i].screenshots[0].url.replace("t_thumb/", "") + "' /></div>"
+                    } else {
+                        htmlString += "<div class='gamebox-no-img gameObject' id='" + result[i].id + "'><h4>" + result[i].name + "</h4></div>"
+                    }
                 }
                 htmlString += "</div>";
                 // Output list of games found to div
@@ -34,17 +39,18 @@
                                     "<img class='gameImg' src='" + result[0].screenshots[0].url.replace("t_thumb/", "") + "' />" +
                                     "<h2> Game Title: " + result[0].name + "</h2>" +
                                     "<h3> Rating: " + result[0].rating.toFixed(2) + "</h3>" +
-                                    "<h4> Summary: " + result[0].summary + "</h4>" +
+                                    "<h4> Summary: " + result[0].summary + "</h4><div class='collection-add'>" +
                                     "<button type='button' class='claim' id='" + result[0].id + "'>Add to your collection</button>" +
-                                    "</div>";
+                                    "</div></div>";
                             }
                             else {
                                 var htmlString = "<div class='game-detail'>" +
                                     "<h2> Game Title: " + result[0].name + "</h2>" +
                                     "<h3> Rating: No Rating </h3>" +
-                                    "<h4> Summary: " + result[0].summary + "</h4>" +
+                                    "<h4> Summary: " + result[0].summary + "</h4> <div class='collection-add'>" +
                                     "<button type='button' class='claim' id='" + result[0].id + "'>Add to your collection</button>" +
-    "</div>";
+                                    "<a href='Games/FindTrades/"+ result[0].id +"'>Find Trades</a>" +
+    "</div></div>";
                             }
                             // Output Game Detail to div
                             $(".games").html(htmlString);
@@ -57,7 +63,7 @@
                                     dataType: 'json',
                                     data: { id: this.id },
                                     success: function (result) {
-                                        console.log(result);
+                                        $(".collection-add").html("<h4>You've added this to your collection</h4>");
                                     }
                                 })
                             })

@@ -36,7 +36,7 @@ namespace GameStart.Controllers
         public IActionResult GetGames(string searchQuery)
         {
             string parsedSearch = searchQuery.Replace(" ", "+");
-            var result = Game.GetGames("?fields=name&li mit=10&offset=0&order=release_dates.date%3Adesc&search=" + parsedSearch);
+            var result = Game.GetGames("?fields=name,screenshots&limit=10&offset=0&order=release_dates.date%3Adesc&search=" + parsedSearch);
             return Json(result);
         }
 
@@ -64,6 +64,12 @@ namespace GameStart.Controllers
             _db.Entry(foundGame).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Management", "Account");
+        }
+
+        public IActionResult FindTrades(int id)
+        {
+            ViewBag.Id = id;
+            return View(_db.Games.Where(g => g.ApiId == id).ToList());
         }
     }
 }
