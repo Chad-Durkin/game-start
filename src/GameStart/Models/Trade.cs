@@ -12,8 +12,8 @@ namespace GameStart.Models
     {
         [Key]
         public int TradeId { get; set; }
-        public int ToUserId { get; set; }
-        public int FromUserId { get; set; }
+        public string ToUserName { get; set; }
+        public string FromUserName { get; set; }
         public string Message { get; set; }
         public bool Accepted { get; set; }
     }
