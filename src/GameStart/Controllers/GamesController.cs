@@ -69,7 +69,7 @@ namespace GameStart.Controllers
         public IActionResult FindTrades(int id)
         {
             ViewBag.Id = id;
-            return View(_db.Games.Where(g => g.ApiId == id).ToList());
+            return View(_db.Games.Where(g => g.ApiId == id && g.Tradeable == true).ToList());
         }
     }
 }
